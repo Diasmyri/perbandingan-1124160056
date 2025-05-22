@@ -4,44 +4,87 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>vanillaCSS</title>
-     <style>
+      <style>
     /* Reset dan base */
-    * {
+    *, *::before, *::after {
       box-sizing: border-box;
     }
+
     body {
       margin: 0;
-      background-color: #f3f4f6; /* bg-gray-100 */
+      background: #f9fafb; /* soft gray */
       min-height: 100vh;
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 0 1rem; /* px-4 */
-      font-family: system-ui, sans-serif;
-      color: #374151; /* text-gray-700 */
+      padding: 1.5rem 1.25rem;
+      font-family:
+        'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #374151;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      user-select: none;
     }
+
     main {
-      background: #fff; /* bg-white */
-      box-shadow: 0 1px 3px rgb(0 0 0 / 0.1), 0 1px 2px rgb(0 0 0 / 0.06); /* shadow-md */
-      border-radius: 0.5rem; /* rounded-lg */
-      padding: 2rem; /* p-8 */
-      max-width: 24rem; /* max-w-sm */
+      background: #fff;
+      max-width: 28rem;
       width: 100%;
+      padding: 3rem 2.5rem;
+      border-radius: 1rem;
+      box-shadow:
+        0 1rem 2rem rgba(0, 0, 0, 0.1),
+        0 0 0.5rem rgba(0, 0, 0, 0.05);
       text-align: center;
+      transition: box-shadow 0.25s ease, transform 0.25s ease;
+      cursor: default;
     }
+    main:hover {
+      box-shadow:
+        0 1.5rem 3rem rgba(0, 0, 0, 0.15),
+        0 0 1rem rgba(0, 0, 0, 0.1);
+      transform: translateY(-4px);
+    }
+
     h1 {
-      font-weight: 600; /* font-semibold */
-      font-size: 1.5rem; /* text-2xl */
-      color: #1f2937; /* text-gray-800 */
-      margin-bottom: 1rem; /* mb-4 */
+      font-weight: 700;
+      font-size: 2.25rem; /* 36px */
+      margin-bottom: 1.5rem;
+      color: #111827;
+      letter-spacing: 0.03em;
+      text-transform: capitalize;
+      text-shadow: 0 0 3px rgba(0, 0, 0, 0.03);
     }
+
     p {
-      margin: 0 0 1.5rem 0; /* mb-6 untuk 1 paragraf, mb-4 untuk lainnya */
-      color: #4b5563; /* text-gray-600 */
+      margin: 0 0 1.75rem 0;
+      color: #4b5563;
+      font-size: 1.125rem; /* 18px */
+      max-width: 24rem;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.7;
     }
     p:last-child {
       margin-bottom: 0;
-      color: #374151; /* text-gray-700 */
+      color: #374151;
+      font-weight: 600;
+      font-style: italic;
+    }
+
+    @media (max-width: 360px) {
+      main {
+        padding: 2rem 1.5rem;
+        max-width: 100%;
+      }
+      h1 {
+        font-size: 1.75rem;
+      }
+      p {
+        font-size: 1rem;
+        max-width: 100%;
+      }
     }
   </style>
 </head>
